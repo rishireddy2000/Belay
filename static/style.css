@@ -1,0 +1,314 @@
+html {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #4A154B;
+  margin: 0;
+  height: 100vh;
+  font-size: 20px;
+}
+
+.unauth, .auth {
+  width: 95%;
+  margin: auto;
+}
+
+.home {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+button.home.dark{
+  width: fit-content;
+  height: fit-content;
+}
+
+[class^="messageEntry"]{
+  padding: 10px;
+}
+
+
+button.logout.right {
+  width: 75px;
+  height: 35px;
+  margin-top: 19px;
+}
+
+button.narrowhide{
+  border-radius: 10%;
+  border: black;
+}
+
+.title {
+  color: rgb(0, 0, 0);
+  margin-top: 10%;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gotologin, .gotosignup{
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+
+  align-items: center;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+input {
+  margin-left: 5px;
+}
+
+.container {
+  width: 900px;
+  height: 100%;
+  margin: auto;
+  padding: 0 30px;
+  background-color: #F4EDE4;
+}
+
+button, .emoji {
+  will-change: transform;
+  transition: transform 100ms;
+}
+
+button {
+  font-family: sans-serif;
+  background-color: #f4ede4;
+  padding: 6px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 10px;
+  width:auto;
+  height: auto;
+  border: none;
+}
+
+button:hover, .emoji:hover {
+  transform: scale(1.1);
+}
+
+.channelColumn {
+  background: #6a276b;
+  padding: 1px;
+}
+
+p.channelName:hover {
+  background-color: #36C5F0;
+}
+
+button.createchannelbutton{
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 30px;
+}
+
+.curChan {
+  width: auto;
+  background-color: #36C5F0;
+  color: #F4EDE4;
+  padding: 5px;
+}
+textarea#postMessage{
+  width: 75%;
+  align-self: center;
+  height: 50px;
+  border-radius: 10px;
+}
+.postReply{
+  margin: 10px;
+}
+textarea#postReplies{
+  width: 75%;
+  align-self: center;
+  border-radius: 10px;
+  height: 50px;
+}
+.postReplies{
+  margin: 10px;
+}
+
+button.right {
+  width: auto;
+  float: right;
+  margin: 10px;
+}
+
+.flexsection button {
+  margin-left: 0;
+}
+
+.messagesList, .repliesSection {
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+.repliesList {
+  display: list-item;
+}
+
+.gridbox0, .gridbox1, .gridbox2, .gridbox3, .gridbox4, .gridbox5 {
+  display: flex;
+  grid-column: 1 / 2;
+}
+
+.gridbox0, .gridbox3 {
+  grid-row: 1 / 2;
+}
+
+.gridbox1, .gridbox4 {
+  grid-row: 2 / 6;
+}
+
+hr{
+  border: 1px solid #000;
+  visibility: visible;
+  display: block;
+  width: 100%;
+}
+
+.gridbox2, .gridbox5 {
+  grid-row: 6 / 8;
+}
+
+.messagesbox button, .threadbox button {
+  margin: 0;
+  width: auto;
+  border: black;
+}
+
+@media (min-width: 800px) {
+  .flexsection {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .channelsbox {
+    background-color: #6a276b;
+    color: #F4EDE4;
+    /* border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px; */
+    overflow-y: scroll;
+  }
+
+  .channelsbox::-webkit-scrollbar {
+    width: 10px;
+}
+
+.channelsbox::-webkit-scrollbar-track {
+    border-radius: 8px;
+    height: 80%;
+    background-color: #4A154B;
+    border: 1px solid #F4EDE4;
+}
+
+.channelsbox::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    height: 5px;
+    background-color: #F4EDE4;
+}
+
+  
+  input#changeUsername{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    text-indent: 15px;
+  }
+
+  input#changePassword{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    text-indent: 15px;
+  }
+
+  h1.title{
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;
+  }
+
+
+
+  input#loginUsername{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    text-indent: 15px;
+  }
+
+  input#loginPassword{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    text-indent: 15px;
+  }
+  
+    label{
+      font-size: larger;
+      font-weight: bolder;
+      color: white;
+    }
+
+  flexbox {
+    flex: 1;
+    padding: 0 30px;
+    background-color: #F4EDE4;
+    margin: 1px;
+    height: 88vh;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  flexbox.channelsbox{
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+
+  flexbox.wide {
+    flex: 3;
+  }
+
+  .widehide {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 800px) {
+  .narrowhide {
+    display: none;
+  }
+}
+
+.hide {
+  display: none;
+}

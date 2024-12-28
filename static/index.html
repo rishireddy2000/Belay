@@ -1,0 +1,154 @@
+<html lang="en">
+
+<head>
+    <title>Belay</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+
+<body>
+    <div class="auth">
+        <button class="home dark" onclick="gohome()"> <img src="/static/slack-logo-icon.png" alt="logo" style="width:50px; height:50px;"></button>
+
+        <button class="logout right" onclick="logout()">Logout</button>
+        <button class="profileButton right" onclick="router('/profile')" style="border: none; background: none;"><img src="/static/img_avatar.png" alt="Avatar" class="avatar"></button>
+
+        <div class="profile">
+            <div class="changeUsername center">
+                <label for="changeUsername">Username: </label>
+                <input name="changeUsername" id="changeUsername" placeholder="Enter you new username" />
+                <button onclick="changeUsername()">update</button>
+            </div>
+            <div class="changePassword center">
+                <label for="changePassword">Password: </label>
+                <input type="password" name="changePassword" id="changePassword" placeholder="Enter you new password" />
+                <button onclick="changePassword()">update</button>
+            </div>
+        </div>
+        <div class="workspace flexsection">
+            <flexbox class="channelsbox narrowhide">
+                <br>
+                <h2>Channels</h2>
+                <div class="channelsList">
+                    <ol>
+                        loading...
+                    </ol>
+                </div>
+                <div class="createChannel">
+                    <button class="createChannelButton" onclick="openCreateChannel()"> + Create new channel</button>
+                    <div class="channelCreateForm hide" style="margin-top: 10px;">
+
+                        <label for="createChannelName">Channel name: </label>
+                        <input name="createChannelName" id="createChannelName" />
+                        <button onclick="createChannel()">Create</button>
+
+                    </div>
+                </div>
+            </flexbox>
+            <flexbox class="messagesbox wide narrowhide">
+                <button class="widehide" onclick="router('/')">Back to channels list</button>
+                <div class="outChannelView">
+                    <p class="center" style="margin-top: 40vh;">Select a channel to view messages</p>
+                </div>
+                <div class="inChannelView hide">
+                    <div class="gridbox0">
+                        <h2 class="channelTitle">Channel</h2>
+                    </div>
+                    <div class="messagesList gridbox1">
+                    </div>
+                    <div class="postMessage gridbox2 center">
+                        <textarea name="postMessage" id="postMessage" rows="2" cols="50"
+                            placeholder="What do you have to say?"></textarea>
+                        <button type="submit" onclick="postMessage(1)" value="Send">Send</button </div>
+                    </div>
+                </div>
+            </flexbox>
+            <flexbox class="threadbox hide wide narrowhide">
+                <div>
+                    <div class="gridbox3">
+                        <h2 class="threadTitle">
+                            <button class="widehide" onclick="router()">Back to the channel</button>
+                            <button class="narrowhide" onclick="router()" style="color: rgb(235, 47, 47); padding: 0;">Close thread</button>
+                        </h2>
+                    </div>
+                    <div class="repliesSection gridbox4">
+                        <h3 class="messageTitle">Message</h3>
+                        <div class="repliedMessageEntry">
+                        </div>
+                        <h3 class="replyTitle">Replies</h3>
+                        <div class="repliesList">
+                        </div>
+                    </div>
+
+                    <div class="postReply gridbox5 center">
+                        <textarea name="postReplies" id="postReplies" rows="2" cols="50"
+                            placeholder="What do you have to say?"></textarea>
+                        <input hidden id="replies_to">
+                        <button type="submit" onclick="postReplies(1)" value="Send">Send</button>
+
+                    </div>
+                </div>
+
+            </flexbox>
+        </div>
+
+
+
+    </div>
+    <div class="unauth">
+
+        <button class="home dark" onclick="gohome()">Home</button>
+        <div class="center">
+            <h1 class="title">Belay</h1>
+        </div>
+        <br>
+        <div class="center">
+            <div class="gotologin">
+                Already have an account?
+                <button class="dark" onclick="gotologin()">Login</button>
+            </div>
+        </div>
+        <br>
+        <div class="center">
+            <div class="gotosignup">
+New to Belay?
+                <button class="dark" onclick="gotosignup()">Signup</button>
+            </div>
+        </div>
+        <div class="signupForm hide">
+            <div class="center">
+                <label for="signupUsername">Username</label>
+                <input name="signupUsername" id="signupUsername"></input>
+            </div>
+            <br>
+            <div class="center">
+                <label for="signupPassword">Password</label>
+                <input type="password" name="signupPassword" id="signupPassword" />
+            </div>
+            <br>
+            <div class="center">
+                <button class="dark" class="signupButton" onclick="signup()">Signup</button>
+            </div>
+        </div>
+        <div class="loginForm hide">
+            <div class="center">
+                <label for="loginUsername">Username</label>
+                <input name="loginUsername" id="loginUsername"></input>
+            </div>
+            <br>
+            <div class="center">
+                <label for="loginPassword">Password</label>
+                <input type="password" name="loginPassword" id="loginPassword" />
+            </div>
+            <br>
+            <div class="center">
+                <button class="dark" class="loginButton" onclick="login()">Login</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/messages.js"> </script>
+    <script src="/static/replies.js"> </script>
+    <script src="/static/reactions.js"> </script>
+    <script src="/static/script.js"> </script>
+</body>
+
+</html>
